@@ -1,3 +1,9 @@
-<button class="button">
+<button
+  class="button"
+  [style.width]="width ?? '100%'"
+  [ngClass]="{
+    'button__white': color === 'white',
+    'button__brown': color === 'brown'
+  }">
   <ng-content></ng-content>
 </button>

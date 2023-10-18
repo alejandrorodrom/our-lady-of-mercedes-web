@@ -6,5 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent {
-  @Input({ required: true }) color!: 'blue' | 'white';
+  @Input({ required: true }) color!: 'brown' | 'white';
+  @Input({ required: false }) width?: string;
 }

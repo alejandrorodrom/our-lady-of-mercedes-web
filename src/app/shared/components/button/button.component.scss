@@ -13,9 +13,24 @@
     font-size: 15px;
     font-family: BarlowCondensed-Regular, serif;
 
-    &:hover {
-      cursor: pointer;
-      background-color: #bea76d;
+    &__white {
+      background-color: white;
+      color: #A69153;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #cecece;
+      }
+    }
+
+    &__brown {
+      background-color: #A69153;
+      color: white;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #bea76d;
+      }
     }
   }
 }
