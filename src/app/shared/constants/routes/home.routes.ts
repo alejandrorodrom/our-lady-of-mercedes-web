@@ -1,6 +1,6 @@
 import { MODULES_ROUTES } from "./modules.routes";
 
-const HOME_PAGES = {
+export const HOME_PAGES = {
   SUMMARY: ''
 } as const;
 
