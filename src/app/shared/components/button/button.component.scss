@@ -1,0 +1,21 @@
+:host {
+  display: block;
+
+  .button {
+    background-color: #A69153;
+    color: white;
+    transition: 0.2s;
+    outline: 0;
+    border: none;
+    border-radius: 15px;
+    padding: 14px 10px;
+    width: 100%;
+    font-size: 15px;
+    font-family: BarlowCondensed-Regular, serif;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #bea76d;
+    }
+  }
+}
