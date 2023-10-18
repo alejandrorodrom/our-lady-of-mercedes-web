@@ -5,5 +5,5 @@ const HOME_PAGES = {
 } as const;
 
 export const HOME_ROUTES = {
-  SUMMARY: `${MODULES_ROUTES}/${HOME_PAGES.SUMMARY}`
+  SUMMARY: `${MODULES_ROUTES.HOME}/${HOME_PAGES.SUMMARY}`
 } as const;
