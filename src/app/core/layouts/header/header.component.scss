@@ -24,6 +24,7 @@
     align-items: center;
     justify-content: space-between;
     height: 88px;
+    background-color: white;
 
     &--logo {
       display: flex;
@@ -38,7 +39,7 @@
 
     &--options {
       display: flex;
-      gap: 22px;
+      gap: 30px;
       font-size: 18px;
       font-family: BarlowCondensed-Regular, serif;
     }
