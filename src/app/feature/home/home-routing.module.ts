@@ -5,6 +5,11 @@ import { HOME_PAGES } from "../../shared/constants/routes/home.routes";
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: HOME_PAGES.SUMMARY,
+    pathMatch: 'full'
+  },
+  {
     path: HOME_PAGES.SUMMARY,
     component: SummaryComponent
   },

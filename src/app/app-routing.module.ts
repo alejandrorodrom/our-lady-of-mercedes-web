@@ -4,6 +4,11 @@ import { MODULES_ROUTES } from "./shared/constants/routes/modules.routes";
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: MODULES_ROUTES.HOME,
+    pathMatch: 'full'
+  },
+  {
     path: MODULES_ROUTES.HOME,
     loadChildren: () => import('./feature/home/home.module').then(m => m.HomeModule)
   },

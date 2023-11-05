@@ -42,6 +42,11 @@
       gap: 30px;
       font-size: 18px;
       font-family: BarlowCondensed-Regular, serif;
+
+      & > p:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
     }
 
     &--registration {
