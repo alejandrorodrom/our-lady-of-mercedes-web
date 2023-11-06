@@ -1,0 +1,64 @@
+<div class="title">
+  <h2>Proyecto de Innovación</h2>
+  <h3>Descubriendo un mundo fascinante con la filosofía</h3>
+</div>
+
+<div class="team">
+  <h3>Equipo de trabajo</h3>
+
+  <div class="team__container">
+    <div class="information">
+      <div class="information__members">
+        <div class="member">
+          <div class="member__image"></div>
+          <p>Mg. Pascual Aguilar Estrada Director</p>
+        </div>
+        <div class="member">
+          <div class="member__image">
+            <img src="assets/images/presentation/liliana.png" alt="liliana">
+          </div>
+          <p>Dra. Liliana Paucarcaja Rojas Coordinadora</p>
+        </div>
+        <div class="member">
+          <div class="member__image"></div>
+          <p>Lic. Richard Curihuaman Landeo Profesor de Innovación Pedagógica</p>
+        </div>
+      </div>
+      <p class="information__description">
+        El proyecto de innovación “Descubriendo un mundo fascinante con la filosofía” de la I.E. 5076 Nuestra Señora de
+        las Mercedes de la Provincia Constitucional del Callao – Lima, Perú, tiene como propósito fomentar el
+        pensamiento
+        reflexivo, crítico y filosófico en los estudiantes, el cual les permitirá cuestionarse y pensar por sí mismos
+        acerca de la realidad, de esta forma podrán desarrollar su pensamiento crítico de manera autentica, libre y
+        democrática, así como potenciar el desarrollo cognitivo y emocional para reforzar sus habilidades sociales como
+        la
+        empatía, asertividad y la escucha activa.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<div class="general-objective">
+  <h3>Objetivo General</h3>
+  <p>
+    Fomentar en los estudiantes la reflexión filosófica a través de la implementación de estrategias que promuevan el
+    pensamiento crítico, creativo y ético mediante la creación de la comunidad filosófica y el uso de herramientas
+    tecnológicas.
+  </p>
+  <img src="assets/images/presentation/general-objetive.png" alt="general-objetive">
+</div>
+
+<div class="philosophical-decalogue">
+  <h3>Decálogo Filosófico</h3>
+
+  <div *ngFor="let rowTickets of tickets" class="philosophical-decalogue__row">
+    <div *ngFor="let ticket of rowTickets" class="philosophical-decalogue__ticket">
+      <div class="philosophical-decalogue__ticket--edge-top-left"></div>
+      <div class="philosophical-decalogue__ticket--edge-top-right"></div>
+      <div class="philosophical-decalogue__ticket--edge-bottom-left"></div>
+      <div class="philosophical-decalogue__ticket--edge-bottom-right"></div>
+      <p>{{ ticket.text }}</p>
+    </div>
+  </div>
+</div>

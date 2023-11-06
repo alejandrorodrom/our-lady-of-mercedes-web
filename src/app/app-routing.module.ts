@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MODULES_ROUTES } from "./shared/constants/routes/modules.routes";
+import { MODULES_ROUTES } from "./core/routes/modules.routes";
 
 const routes: Routes = [
   {
@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: MODULES_ROUTES.HOME,
     loadChildren: () => import('./feature/home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path: MODULES_ROUTES.PEDAGOGICAL_INNOVATION,
+    loadChildren: () => import('./feature/pedagogical-innovation/pedagogical-innovation.module').then(m => m.PedagogicalInnovationModule)
   },
   {
     path: '**',

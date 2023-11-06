@@ -3,7 +3,7 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { HeaderComponent } from './layouts/header/header.component';
 import { SharedModule } from "../shared/shared.module";
 import { FooterComponent } from './layouts/footer/footer.component';
-import { RouterLink } from "@angular/router";
+import { RouterLink, RouterLinkActive } from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { RouterLink } from "@angular/router";
     CommonModule,
     SharedModule,
     NgOptimizedImage,
-    RouterLink
+    RouterLink,
+    RouterLinkActive
   ]
 })
 export class CoreModule { }

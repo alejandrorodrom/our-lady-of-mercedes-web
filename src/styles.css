@@ -26,3 +26,8 @@ body {
   font-family: "BarlowCondensed-SemiBold";
   src: url(assets/fonts/BarlowCondensed/BarlowCondensed-SemiBold.ttf);
 }
+
+@font-face {
+  font-family: "BarlowCondensed-Bold";
+  src: url(assets/fonts/BarlowCondensed/BarlowCondensed-Bold.ttf);
+}

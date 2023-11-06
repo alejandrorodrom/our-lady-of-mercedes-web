@@ -11,11 +11,17 @@
       <h1>Nuestra Señora de las Mercedes</h1>
     </div>
     <div class="header__content--options">
-      <p routerLink="">Misión y Visión</p>
-      <p>Innovación Pedagógica</p>
-    </div>
-    <div class="header__content--registration">
-      <app-button color="brown">Iniciar Matrícula</app-button>
+      <p [routerLink]="MODULES_ROUTES.HOME">Misión y Visión</p>
+      <p [routerLink]="MODULES_ROUTES.PEDAGOGICAL_INNOVATION">Innovación Pedagógica</p>
     </div>
   </div>
 </header>
+<nav class="pedagogical-innovation" *ngIf="isPedagogicalInnovation">
+  <p
+    *ngFor="let option of pedagogicalInnovation"
+    class="pedagogical-innovation__option"
+    [routerLink]="option.route"
+    routerLinkActive="pedagogical-innovation__option--active">
+    {{ option.name }}
+  </p>
+</nav>

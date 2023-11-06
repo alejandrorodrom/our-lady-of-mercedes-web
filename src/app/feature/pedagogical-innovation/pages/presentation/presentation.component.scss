@@ -1,0 +1,174 @@
+.title {
+  background-color: #A69153;
+  padding: 35px 0;
+
+  & > * {
+    margin: 0;
+    font-family: BarlowCondensed-Bold, sans-serif;
+    color: white;
+    text-align: center;
+  }
+
+  & > h2 {
+    font-size: 45px;
+    margin-bottom: 10px;
+  }
+
+  & > h3 {
+    font-size: 30px;
+  }
+}
+
+.team {
+  padding: 35px 0;
+
+  & > h3 {
+    text-align: center;
+    margin: 0 0 100px 0;
+    font-family: BarlowCondensed-Bold, sans-serif;
+    font-size: 30px;
+  }
+
+  &__container {
+    display: block;
+    background-color: #e5d298;
+    border-radius: 25px;
+    max-width: 800px;
+    margin: auto;
+
+    .information {
+      position: relative;
+      top: -50px;
+      font-family: BarlowCondensed-Regular, sans-serif;
+
+      &__members {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        .member {
+          width: 195px;
+
+          &__image {
+            height: 150px;
+
+            & > img {
+              height: 150px;
+            }
+          }
+        }
+      }
+
+      &__description {
+        padding-inline: 40px;
+      }
+    }
+  }
+}
+
+.general-objective {
+  background-color: #e5d298;
+  padding: 50px 0;
+  text-align: center;
+
+  & > h3 {
+    font-family: BarlowCondensed-Bold, sans-serif;
+    font-size: 30px;
+    margin: 0 0 25px 0;
+  }
+
+  & > p {
+    max-width: 900px;
+    margin: auto;
+    text-align: justify;
+  }
+
+  & > img {
+    margin-top: 25px;
+    max-width: 745px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.philosophical-decalogue {
+  padding: 55px 0;
+
+  & > h3 {
+    font-family: BarlowCondensed-Bold, sans-serif;
+    font-size: 30px;
+    margin: 0 0 25px 0;
+    text-align: center;
+  }
+
+  &__row {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+
+  &__ticket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    padding: 15px;
+    max-width: 360px;
+    height: 100px;
+    box-shadow: inset 0 0 0 4px black;
+    overflow: hidden;
+    background-color: #e5d298;
+    font-family: BarlowCondensed-Regular, sans-serif;
+
+    & > p {
+      margin: 0;
+    }
+
+    &--edge-top-left {
+      position: absolute;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      border: 4px solid black;
+      left: -20px;
+      top: -20px;
+      background-color: white;
+    }
+
+    &--edge-top-right {
+      position: absolute;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      border: 4px solid black;
+      right: -20px;
+      top: -20px;
+      background-color: white;
+    }
+
+    &--edge-bottom-left {
+      position: absolute;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      border: 4px solid black;
+      left: -20px;
+      bottom: -20px;
+      background-color: white;
+    }
+
+    &--edge-bottom-right {
+      position: absolute;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      border: 4px solid black;
+      right: -20px;
+      bottom: -20px;
+      background-color: white;
+    }
+
+  }
+}

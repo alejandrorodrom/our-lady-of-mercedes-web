@@ -1,9 +1,4 @@
 .header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 9999;
-
   &__social {
     display: flex;
     align-items: center;
@@ -42,14 +37,48 @@
       gap: 30px;
       font-size: 18px;
       font-family: BarlowCondensed-Regular, serif;
+      user-select: none;
 
       & > p:hover {
         text-decoration: underline;
         cursor: pointer;
       }
     }
+  }
+}
 
-    &--registration {
+.pedagogical-innovation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  height: 60px;
+  background-color: #403E3F;
+  font-family: BarlowCondensed-Regular, sans-serif;
+  font-size: 18px;
+
+  &__option {
+    user-select: none;
+    color: white;
+    cursor: pointer;
+    padding: 7px;
+    margin: 0;
+
+    &:hover {
+      background-color: #7c7777;
+      border-radius: 5px;
+      padding: 7px;
+    }
+
+    &--active {
+      background-color: white;
+      border-radius: 5px;
+      padding: 7px;
+      color: black;
+
+      &:hover {
+        background-color: white;
+      }
     }
   }
 }

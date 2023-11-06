@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SummaryComponent } from "./pages/summary/summary.component";
-import { HOME_PAGES } from "../../shared/constants/routes/home.routes";
+import { HOME_PAGES } from "../../core/routes/home.routes";
 
 const routes: Routes = [
   {
@@ -12,11 +12,6 @@ const routes: Routes = [
   {
     path: HOME_PAGES.SUMMARY,
     component: SummaryComponent
-  },
-  {
-    path: '**',
-    redirectTo: HOME_PAGES.SUMMARY,
-    pathMatch: 'full'
   }
 ];
 
