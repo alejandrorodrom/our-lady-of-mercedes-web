@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MODULES_ROUTES } from "../../../../core/routes/modules.routes";
 
 @Component({
   selector: 'app-summary',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class SummaryComponent {
 
+  protected readonly MODULES_ROUTES = MODULES_ROUTES;
 }

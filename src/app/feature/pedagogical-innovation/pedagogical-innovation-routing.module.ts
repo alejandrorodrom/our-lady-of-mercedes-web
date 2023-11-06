@@ -4,6 +4,7 @@ import { PEDAGOGICAL_INNOVATION_PAGES } from "../../core/routes/pedagogical-inno
 import { PresentationComponent } from "./pages/presentation/presentation.component";
 import { PhilosophicalSessionsComponent } from "./pages/philosophical-sessions/philosophical-sessions.component";
 import { PhilosophicalWorkshopsComponent } from "./pages/philosophical-workshops/philosophical-workshops.component";
+import { CurrentPhilosophicalComponent } from "./pages/current-philosophical/current-philosophical.component";
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: PEDAGOGICAL_INNOVATION_PAGES.PHILOSOPHICAL_WORKSHOPS,
     component: PhilosophicalWorkshopsComponent
+  },
+  {
+    path: PEDAGOGICAL_INNOVATION_PAGES.CURRENT_PHILOSOPHICAL,
+    component: CurrentPhilosophicalComponent
   }
 ];
 

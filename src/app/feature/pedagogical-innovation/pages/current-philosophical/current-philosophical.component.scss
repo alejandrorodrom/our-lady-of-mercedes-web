@@ -1,0 +1,75 @@
+@mixin frame-structure {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  max-width: 650px;
+  height: auto;
+  padding: 50px;
+  border-radius: 20px;
+  gap: 15px;
+  text-align: center;
+
+  & > img {
+    height: 100%;
+    width: auto;
+    max-width: 500px;
+  }
+
+  & > a {
+    font-family: BarlowCondensed-Regular, sans-serif;
+    font-size: 18px;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+
+  & > div:nth-child(odd) {
+    align-self: flex-start;
+    margin-bottom: 30px;
+  }
+
+  & > div:nth-child(even) {
+    align-self: flex-end;
+    margin-bottom: 30px;
+  }
+
+  &-one {
+    background-color: #bea76d;
+
+    &__frame {
+      @include frame-structure;
+      background-color: #cecece;
+
+      & > a {
+        color: black;
+      }
+    }
+  }
+
+  &-two {
+    background-color: #cd9797;
+
+    &__frame {
+      @include frame-structure;
+      background-color: white;
+
+      & > a {
+        color: black;
+      }
+    }
+  }
+
+  &-three {
+    &__frame {
+      @include frame-structure;
+      background-color: #7c7777;
+
+      & > a {
+        color: white;
+      }
+    }
+  }
+}

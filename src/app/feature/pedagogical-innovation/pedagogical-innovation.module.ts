@@ -5,13 +5,15 @@ import { PedagogicalInnovationRoutingModule } from './pedagogical-innovation-rou
 import { PresentationComponent } from './pages/presentation/presentation.component';
 import { PhilosophicalSessionsComponent } from './pages/philosophical-sessions/philosophical-sessions.component';
 import { PhilosophicalWorkshopsComponent } from './pages/philosophical-workshops/philosophical-workshops.component';
+import { CurrentPhilosophicalComponent } from './pages/current-philosophical/current-philosophical.component';
 
 
 @NgModule({
   declarations: [
     PresentationComponent,
     PhilosophicalSessionsComponent,
-    PhilosophicalWorkshopsComponent
+    PhilosophicalWorkshopsComponent,
+    CurrentPhilosophicalComponent
   ],
   imports: [
     CommonModule,
