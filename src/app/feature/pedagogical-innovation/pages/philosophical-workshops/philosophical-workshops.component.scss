@@ -1,0 +1,46 @@
+.space-to-think {
+  background-color: #bea76d;
+  padding: 30px;
+
+  &__frame {
+    background-color: white;
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 30px 130px;
+    text-align: center;
+
+    & > h3 {
+      font-family: BarlowCondensed-Bold, sans-serif;
+      font-size: 30px;
+    }
+
+    & > img {
+      height: 100%;
+      max-width: 500px;
+      width: auto;
+      margin-bottom: 30px;
+    }
+
+    & > div > p {
+      font-family: BarlowCondensed-Regular, sans-serif;
+      font-size: 18px;
+      text-align: justify;
+    }
+  }
+}
+
+.photos {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  gap: 50px;
+  grid-template-columns: repeat(2, auto);
+  padding: 50px;
+
+  & > img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+  }
+}
