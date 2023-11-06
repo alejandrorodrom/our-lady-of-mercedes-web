@@ -24,7 +24,7 @@
 .section {
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  padding: 50px 200px;
 
   & > div:nth-child(odd) {
     align-self: flex-start;
