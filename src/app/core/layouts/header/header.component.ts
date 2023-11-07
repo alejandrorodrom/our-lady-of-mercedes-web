@@ -25,11 +25,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
     {
       name: 'Sesiones Filosóficas',
       route: PEDAGOGICAL_INNOVATION_ROUTES.PHILOSOPHICAL_SESSIONS
-    },
+    },/*
     {
       name: 'Estrategias Reflexivas',
       route: PEDAGOGICAL_INNOVATION_ROUTES.REFLECTIVE_STRATEGIES
-    },
+    },*/
     {
       name: 'Talleres Filosóficos',
       route: PEDAGOGICAL_INNOVATION_ROUTES.PHILOSOPHICAL_WORKSHOPS
