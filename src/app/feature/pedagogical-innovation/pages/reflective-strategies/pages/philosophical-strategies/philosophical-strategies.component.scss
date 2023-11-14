@@ -110,6 +110,22 @@
       width: auto;
     }
   }
+
+  &__photos1 {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    gap: 50px;
+    grid-template-columns: repeat(3, auto);
+    padding-top: 50px;
+
+    & > img {
+      height: 200px;
+      max-width: 360px;
+      width: auto;
+    }
+  }
+
 }
 
 .the-unknown-zone {
