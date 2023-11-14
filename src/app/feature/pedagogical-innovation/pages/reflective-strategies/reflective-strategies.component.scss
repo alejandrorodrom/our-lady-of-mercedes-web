@@ -1,0 +1,36 @@
+.reflective-strategies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  height: 50px;
+  background-color: white;
+  color: black;
+  font-family: BarlowCondensed-Regular, sans-serif;
+  font-size: 18px;
+
+  &__option {
+    user-select: none;
+    color: black;
+    cursor: pointer;
+    padding: 7px;
+    margin: 0;
+
+    &:hover {
+      background-color: #7c7777;
+      border-radius: 5px;
+      padding: 7px;
+    }
+
+    &--active {
+      background-color: #403E3F;
+      border-radius: 5px;
+      padding: 7px;
+      color: white;
+
+      &:hover {
+        background-color: #403E3F;
+      }
+    }
+  }
+}

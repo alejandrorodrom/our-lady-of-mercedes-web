@@ -1,0 +1,122 @@
+.flyer {
+  background-color: #bea76d;
+  padding: 30px;
+
+  &__frame {
+    background-color: white;
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 30px 130px;
+    text-align: center;
+
+    & > h3 {
+      font-family: BarlowCondensed-Bold, sans-serif;
+      font-size: 30px;
+    }
+
+    & > img {
+      height: 100%;
+      max-width: 500px;
+      width: auto;
+      margin-bottom: 30px;
+    }
+
+    & > div > p {
+      font-family: BarlowCondensed-Regular, sans-serif;
+      font-size: 18px;
+      text-align: justify;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__photos {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    gap: 50px;
+    grid-template-columns: repeat(2, auto);
+
+    & > img {
+      height: 100%;
+      max-width: 360px;
+      width: auto;
+    }
+  }
+}
+
+.meme {
+  background-color: white;
+  max-width: 1000px;
+  margin: auto;
+  border-radius: 20px;
+  padding: 60px 130px;
+  text-align: center;
+
+  & > h3 {
+    font-family: BarlowCondensed-Bold, sans-serif;
+    font-size: 30px;
+    margin: 0 0 30px 0;
+  }
+
+  &__photos {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    gap: 50px;
+    grid-template-columns: repeat(2, auto);
+
+    & > img {
+      height: 100%;
+      max-width: 360px;
+      width: auto;
+    }
+  }
+}
+
+.future-man {
+  background-color: #bea76d;
+  padding: 30px;
+
+  &__frame {
+    background-color: white;
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 30px 130px;
+    text-align: center;
+
+    & > h3 {
+      font-family: BarlowCondensed-Bold, sans-serif;
+      font-size: 30px;
+    }
+
+    & > img {
+      height: 100%;
+      max-width: 500px;
+      width: auto;
+      margin-bottom: 30px;
+    }
+
+    & > div > p {
+      font-family: BarlowCondensed-Regular, sans-serif;
+      font-size: 18px;
+      text-align: justify;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__photos {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    gap: 50px;
+    grid-template-columns: repeat(2, auto);
+
+    & > img {
+      height: 100%;
+      max-width: 360px;
+      width: auto;
+    }
+  }
+}

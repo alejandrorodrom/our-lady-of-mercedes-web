@@ -1,0 +1,11 @@
+<nav class="reflective-strategies">
+  <p
+    *ngFor="let option of reflectiveStrategies"
+    class="reflective-strategies__option"
+    [routerLink]="option.route"
+    routerLinkActive="reflective-strategies__option--active">
+    {{ option.name }}
+  </p>
+</nav>
+
+<router-outlet></router-outlet>
