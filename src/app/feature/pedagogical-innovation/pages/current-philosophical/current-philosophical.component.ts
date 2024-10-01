@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./current-philosophical.component.scss']
 })
 export class CurrentPhilosophicalComponent {
-
+  
 }

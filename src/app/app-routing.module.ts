@@ -17,6 +17,10 @@ const routes: Routes = [
     loadChildren: () => import('./feature/pedagogical-innovation/pedagogical-innovation.module').then(m => m.PedagogicalInnovationModule)
   },
   {
+    path: MODULES_ROUTES.VIRTUAL_ANATOMY,
+    loadChildren: () => import('./feature/virtual-anatomy/virtual-anatomy.module').then(m => m.VirtualAnatomyModule)
+  },
+  {
     path: '**',
     redirectTo: MODULES_ROUTES.HOME,
     pathMatch: 'full'

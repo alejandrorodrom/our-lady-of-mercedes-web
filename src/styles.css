@@ -31,3 +31,6 @@ body {
   font-family: "BarlowCondensed-Bold";
   src: url(assets/fonts/BarlowCondensed/BarlowCondensed-Bold.ttf);
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
