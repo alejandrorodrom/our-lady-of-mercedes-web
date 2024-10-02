@@ -1,0 +1,30 @@
+:host {
+  width: 100%;
+  min-height: calc(100vh - 182px);
+  background-color: #0E0A40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  .container {
+    background-color: rgb(71, 24, 116);
+    width: 900px;
+    border-radius: 15px;
+    padding: 30px;
+
+    &__data {
+      min-height: 636px;
+      border-radius: 15px;
+      padding: 30px;
+      background-color: #ffffff;
+    }
+
+    &__paginator {
+      border-radius: 15px;
+        margin-top: 15px;
+        font-size: 16px;
+        background-color: #ffffff;
+    }
+  }
+}

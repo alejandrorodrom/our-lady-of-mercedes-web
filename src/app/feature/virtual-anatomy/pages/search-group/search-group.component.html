@@ -15,7 +15,8 @@
         <mat-icon>close</mat-icon>
       </button>
     </mat-form-field>
-    <button mat-raised-button color="primary" class="search__button">Buscar</button>
+    <a [routerLink]="'/'+MODULES_ROUTES.VIRTUAL_ANATOMY+'/'+VIRTUAL_ANATOMY_PAGES.DATA_GROUPS">
+      <button mat-raised-button color="primary" class="search__button">Buscar</button>
+    </a>
   </div>
-
 </section>

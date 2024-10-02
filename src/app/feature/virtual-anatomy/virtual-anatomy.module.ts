@@ -8,12 +8,12 @@ import { VirtualAnatomyRoutingModule } from './virtual-anatomy-routing.module';
 
 @NgModule({
   declarations: [
-    DataGroupComponent
   ],
   imports: [
     SearchGroupComponent,
     CommonModule,
-    VirtualAnatomyRoutingModule
+    VirtualAnatomyRoutingModule,
+    DataGroupComponent
   ]
 })
 export class VirtualAnatomyModule { }
