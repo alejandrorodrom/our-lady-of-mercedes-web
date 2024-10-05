@@ -1,0 +1,215 @@
+[
+    {
+        "nameGroup": "GRUPO UNITY",
+        "createAt": "2024-09-28T11:13:59.143Z",
+        "users": [
+            {
+                "name": "ASDGASG",
+                "lastName": "ASEASG",
+                "grade": 3,
+                "section": "A",
+                "createAt": "2024-09-29T01:55:06.285Z",
+                "answer": [
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Cuántos huesos tiene aproximadamente el cuerpo humano adulto?"
+                        }
+                    },
+                    {
+                        "answerTF": 0,
+                        "question": {
+                            "questionText": "¿Cuál es la función principal de la médula ósea roja?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Qué tipo de hueso es el fémur?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Qué tipo de articulación permite el mayor rango de movimiento?"
+                        }
+                    },
+                    {
+                        "answerTF": 0,
+                        "question": {
+                            "questionText": "¿Qué músculo es el principal responsable de la flexión del brazo en la articulación del codo?"
+                        }
+                    },
+                    {
+                        "answerTF": 0,
+                        "question": {
+                            "questionText": "¿Cuál de los siguientes músculos es responsable de la extensión de la pierna en la articulación de la rodilla?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Cuál de las siguientes enfermedades es una inflamación de las articulaciones que causa dolor y rigidez?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Qué enfermedad se caracteriza por la pérdida de masa ósea y un aumento en el riesgo de fracturas?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Cuál es una enfermedad genética que causa debilidad muscular progresiva y pérdida de masa muscular?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Cuál de las siguientes enfermedades afecta la columna vertebral, causando una curvatura anormal?"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "PRUEBA",
+                "lastName": "PRUEBA EJM",
+                "grade": 3,
+                "section": "A",
+                "createAt": "2024-09-30T07:14:05.230Z",
+                "answer": [
+                    {
+                        "answerTF": 0,
+                        "question": {
+                            "questionText": "¿Cuántos huesos tiene aproximadamente el cuerpo humano adulto?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Cuál es la función principal de la médula ósea roja?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Qué tipo de hueso es el fémur?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Qué tipo de articulación permite el mayor rango de movimiento?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Qué músculo es el principal responsable de la flexión del brazo en la articulación del codo?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Cuál de los siguientes músculos es responsable de la extensión de la pierna en la articulación de la rodilla?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Cuál de las siguientes enfermedades es una inflamación de las articulaciones que causa dolor y rigidez?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Qué enfermedad se caracteriza por la pérdida de masa ósea y un aumento en el riesgo de fracturas?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Cuál es una enfermedad genética que causa debilidad muscular progresiva y pérdida de masa muscular?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Cuál de las siguientes enfermedades afecta la columna vertebral, causando una curvatura anormal?"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "PRUEBA 20",
+                "lastName": "20 APELLDIO",
+                "grade": 3,
+                "section": "A",
+                "createAt": "2024-09-30T08:22:19.134Z",
+                "answer": [
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Cuál es la unidad básica de herencia?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Qué tipo de hueso es el fémur?"
+                        }
+                    },
+                    {
+                        "answerTF": 0,
+                        "question": {
+                            "questionText": "¿Cuál de los siguientes músculos es responsable de la extensión de la pierna en la articulación de la rodilla?"
+                        }
+                    },
+                    {
+                        "answerTF": 0,
+                        "question": {
+                            "questionText": "¿Dónde se encuentran los genes en una célula?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Cuántos cromosomas tienen las células somáticas humanas?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Cuál es una enfermedad genética que causa debilidad muscular progresiva y pérdida de masa muscular?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Cuál es la función principal de la médula ósea roja?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Qué tipo de articulación permite el mayor rango de movimiento?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Qué proceso celular asegura que cada célula hija reciba el número correcto de cromosomas durante la división celular?"
+                        }
+                    },
+                    {
+                        "answerTF": 1,
+                        "question": {
+                            "questionText": "¿Cuál de las siguientes opciones describe mejor el papel de los telómeros?"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

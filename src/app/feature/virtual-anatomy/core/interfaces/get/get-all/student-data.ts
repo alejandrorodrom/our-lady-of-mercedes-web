@@ -61,7 +61,7 @@ const answer: Answer[] = [
           "questionText": "¿Cuál de las siguientes enfermedades afecta la columna vertebral, causando una curvatura anormal?"
       }
   }
-]
+];
 
 export const studentsData: User[] = [
   { name: 'A', lastName: 'Perez', grade: 3, section: "C", createAt: new Date("2024-09-29T01:55:06.285Z"), answer: answer },
@@ -79,5 +79,5 @@ export const studentsData: User[] = [
   { name: 'M', lastName: "Perez", grade: 3, section: "C", createAt: new Date("2024-09-29T01:55:06.285Z"), answer: answer },
   { name: 'N', lastName: "Perez", grade: 3, section: "C", createAt: new Date("2024-09-29T01:55:06.285Z"), answer: answer },
   { name: 'O', lastName: "Perez", grade: 3, section: "C", createAt: new Date("2024-09-29T01:55:06.285Z"), answer: answer }
-]
+];
 

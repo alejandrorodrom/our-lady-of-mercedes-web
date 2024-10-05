@@ -1,5 +1,5 @@
-<section class="container">
-  <div class="container__data mat-elevation-z8">
+<section class="presentation">
+  <div class="presentation__data mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
@@ -39,7 +39,7 @@
     showFirstLastButtons
     pageSize="10"
     hidePageSize="true"
-    class="container__paginator"
+    class="presentation__paginator"
   >
   </mat-paginator>
 </section>

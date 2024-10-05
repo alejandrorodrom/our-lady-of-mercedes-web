@@ -1,0 +1,61 @@
+.presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 182px);
+  background-image: url('/assets/images/fondoRV.webp');
+  background-size: cover;
+  background-position: center;
+
+  .home {
+    margin-right: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__tittle {
+      width: 650px;
+      margin-bottom: 60px;
+
+      > p {
+        margin: 0;
+        font-family: BarlowCondensed-Bold, sans-serif;
+        color: white;
+        text-align: center;
+        font-size: 90px;
+        line-height: 1.4;
+      }
+    }
+
+    &__label {
+      width: 650px;
+      margin-bottom: 60px;
+
+      > p {
+        margin: 0;
+        font-family: BarlowCondensed-Bold, sans-serif;
+        color: white;
+        text-align: center;
+        font-size: 40px;
+        line-height: 1.4;
+      }
+    }
+
+    &__group {
+      width: 250px;
+    }
+
+    &__buttons {
+      display: flex;
+      gap: 20px;
+
+      & button {
+        border-radius: 30px;
+        padding: 30px 80px;
+        font-size: 24px;
+
+      }
+    }
+  }
+}

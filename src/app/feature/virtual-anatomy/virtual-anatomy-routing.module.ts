@@ -2,22 +2,32 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { VIRTUAL_ANATOMY_PAGES } from 'src/app/core/routes/virtual-anatomy.routes';
-import { SearchGroupComponent } from './pages/search-group/search-group.component';
+import { PresentationComponent } from './pages/presentation/presentation.component';
 import { DataGroupComponent } from './pages/data-group/data-group.component';
+import { SearchGroupComponent } from './pages/search-group/search-group.component';
+import { CreateGroupComponent } from './pages/create-group/create-group.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: VIRTUAL_ANATOMY_PAGES.SEARCH_GROUPS,
+    redirectTo: VIRTUAL_ANATOMY_PAGES.PRESENTATION,
     pathMatch: 'full'
   },
   {
-    path: VIRTUAL_ANATOMY_PAGES.SEARCH_GROUPS,
-    component: SearchGroupComponent
+    path: VIRTUAL_ANATOMY_PAGES.PRESENTATION,
+    component: PresentationComponent
   },
   {
     path: VIRTUAL_ANATOMY_PAGES.DATA_GROUPS,
     component: DataGroupComponent
+  },
+  {
+    path: VIRTUAL_ANATOMY_PAGES.CREATE_GROUP,
+    component: CreateGroupComponent
+  },
+  {
+    path: VIRTUAL_ANATOMY_PAGES.SEARCH_GROUPS,
+    component: SearchGroupComponent
   }
 ];
 

@@ -3,8 +3,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-import { User } from './student';
-import { studentsData } from './student-data';
+import { User } from '../../core/interfaces/get/get-all/student';
+import { studentsData } from '../../core/interfaces/get/get-all/student-data';
 import { CommonModule } from '@angular/common';
 
 @Component({

@@ -1,0 +1,21 @@
+<section class="presentation">
+  <div class="home">
+    <div class="home__tittle">
+      <p>ANATOMÍA VIRTUAL</p>
+    </div>
+
+    <div class="home__label">
+      <p>SUPERVISA LAS CALIFICACIONES DE TU GRUPO ACADÉMICO</p>
+    </div>
+
+    <div class="home__buttons">
+      <a [routerLink]="'/'+MODULES_ROUTES.VIRTUAL_ANATOMY+'/'+VIRTUAL_ANATOMY_PAGES.CREATE_GROUP">
+        <button mat-raised-button color="primary" class="home__buttons--create">Crear grupo</button>
+      </a>
+
+      <a [routerLink]="'/'+MODULES_ROUTES.VIRTUAL_ANATOMY+'/'+VIRTUAL_ANATOMY_PAGES.SEARCH_GROUPS">
+        <button mat-raised-button color="primary" class="home__button--search">Buscar grupo</button>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,22 +1,19 @@
-<section class="container">
-  <div class="search">
-    <div class="search__tittle">
-      <p>ANATOMÍA VIRTUAL</p>
-    </div>
-
-    <div class="search__label">
-      <p>SUPERVISA LAS CALIFICACIONES DE TU GRUPO ACADÉMICO</p>
-    </div>
-
-    <mat-form-field class="search__group">
-      <mat-label>Ingrese un código de grupo</mat-label>
-      <input matInput type="text" [(ngModel)]="value">
-      <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-        <mat-icon>close</mat-icon>
-      </button>
-    </mat-form-field>
-    <a [routerLink]="'/'+MODULES_ROUTES.VIRTUAL_ANATOMY+'/'+VIRTUAL_ANATOMY_PAGES.DATA_GROUPS">
-      <button mat-raised-button color="primary" class="search__button">Buscar</button>
-    </a>
-  </div>
+<section class="presentation">
+  <p>BUSCAR GRUPO</p>
+  <mat-form-field class="presentation__create" appearance="fill">
+    <mat-label>Ingrese el nombre de grupo</mat-label>
+    <input matInput type="text" [(ngModel)]="value" class="presentation__create--input" />
+    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value = ''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+  <mat-form-field class="presentation__create" appearance="fill">
+    <mat-label>Ingrese el código de grupo</mat-label>
+    <input matInput type="text" [(ngModel)]="value" class="presentation__create--input" />
+    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value = ''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+  <button mat-raised-button (click)="searchGroup()">Buscar</button>
 </section>
+  
