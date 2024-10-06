@@ -7,10 +7,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 
-import { CreateGroupBody } from 'src/app/feature/virtual-anatomy/core/interfaces/post/create-signup/body';
+import { CreateGroupBody } from 'src/app/feature/virtual-anatomy/core/interfaces/create-group.interface';
 import { environment } from 'src/environment/environments';
 import { GroupFacade } from '../../aplication/group.facade';
 import { DialogCreateComponent } from '../../core/components/dialog-create/dialog-create.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-create-group',
@@ -25,14 +26,15 @@ import { DialogCreateComponent } from '../../core/components/dialog-create/dialo
     MatButtonModule,
     MatIconModule,
     CommonModule,
-    MatDialogModule
+    MatDialogModule,
+    RouterLink
   ]
 })
 export class CreateGroupComponent {
   apiUrl = signal<string>(environment.api)
   private readonly groupService: GroupFacade = inject(GroupFacade);
   private readonly dialog: MatDialog = inject(MatDialog);
-  value = '';
+  name = '';
 
   /*test: CreateGroupResponse = {
     serialGroup: 'asdasdasd',
@@ -52,7 +54,7 @@ export class CreateGroupComponent {
 
   createGroup() {
     const body: CreateGroupBody = {
-      nameGroup: this.value
+      nameGroup: this.name
     }
 
     this.groupService.createGroup(body).subscribe(resp => {

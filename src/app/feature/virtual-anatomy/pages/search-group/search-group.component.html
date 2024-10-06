@@ -1,19 +1,25 @@
 <section class="presentation">
+  <div class="presentation__back">
+    <button mat-button>
+      <a [routerLink]="['../presentacion']">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" zoomAndPan="magnify" viewBox="0 0 810 809.999993" height="80" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="97dc3d5a99"><path d="M 283.5 283.5 L 526.5 283.5 L 526.5 526.5 L 283.5 526.5 Z M 283.5 283.5 " clip-rule="nonzero"/></clipPath><clipPath id="4156c2c7d6"><path d="M 283.5 405 L 405 283.5 L 405 344.25 L 526.5 344.25 L 526.5 465.75 L 405 465.75 L 405 526.5 Z M 283.5 405 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#97dc3d5a99)"><g clip-path="url(#4156c2c7d6)"><path fill="#ebebeb" d="M 283.5 283.5 L 526.5 283.5 L 526.5 526.5 L 283.5 526.5 Z M 283.5 283.5 " fill-opacity="1" fill-rule="nonzero"/></g></g></svg>
+      </a>
+    </button>
+  </div>
   <p>BUSCAR GRUPO</p>
   <mat-form-field class="presentation__create" appearance="fill">
     <mat-label>Ingrese el nombre de grupo</mat-label>
-    <input matInput type="text" [(ngModel)]="value" class="presentation__create--input" />
-    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value = ''">
+    <input matInput type="text" [(ngModel)]="name" class="presentation__create--input" />
+    <button *ngIf="name" matSuffix mat-icon-button aria-label="Clear" (click)="name = ''">
       <mat-icon>close</mat-icon>
     </button>
   </mat-form-field>
   <mat-form-field class="presentation__create" appearance="fill">
     <mat-label>Ingrese el código de grupo</mat-label>
-    <input matInput type="text" [(ngModel)]="value" class="presentation__create--input" />
-    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value = ''">
+    <input matInput type="text" [(ngModel)]="serial" class="presentation__create--input" />
+    <button *ngIf="serial" matSuffix mat-icon-button aria-label="Clear" (click)="serial = ''">
       <mat-icon>close</mat-icon>
     </button>
   </mat-form-field>
   <button mat-raised-button (click)="searchGroup()">Buscar</button>
 </section>
-  

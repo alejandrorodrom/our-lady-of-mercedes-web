@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { GroupRepository } from '../domain/group.repository';
-import { CreateGroupBody } from '../core/interfaces/post/create-signup/body';
-import { SearchGroupBody } from '../core/interfaces/post/search-signin/body';
+import { CreateGroupBody } from '../core/interfaces/create-group.interface';
+import { SearchGroupBody } from '../core/interfaces/search-group.interface';
 
 @Injectable()
 export class GroupFacade {

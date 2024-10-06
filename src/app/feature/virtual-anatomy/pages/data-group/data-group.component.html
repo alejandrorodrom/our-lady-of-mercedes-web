@@ -1,6 +1,18 @@
 <section class="presentation">
+  <div class="presentation__tittle">
+    <div class="presentation__tittle--back">
+      <button mat-button>
+        <a [routerLink]="['../buscar-grupos']">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" zoomAndPan="magnify" viewBox="0 0 810 809.999993" height="80" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="97dc3d5a99"><path d="M 283.5 283.5 L 526.5 283.5 L 526.5 526.5 L 283.5 526.5 Z M 283.5 283.5 " clip-rule="nonzero"/></clipPath><clipPath id="4156c2c7d6"><path d="M 283.5 405 L 405 283.5 L 405 344.25 L 526.5 344.25 L 526.5 465.75 L 405 465.75 L 405 526.5 Z M 283.5 405 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#97dc3d5a99)"><g clip-path="url(#4156c2c7d6)"><path fill="#ebebeb" d="M 283.5 283.5 L 526.5 283.5 L 526.5 526.5 L 283.5 526.5 Z M 283.5 283.5 " fill-opacity="1" fill-rule="nonzero"/></g></g></svg>
+        </a>
+      </button>
+    </div>
+    <div class="presentation__tittle--name">
+      <p>{{groupName}}</p>
+    </div>
+  </div>
   <div class="presentation__data mat-elevation-z8">
-    <table mat-table [dataSource]="dataSource">
+    <table mat-table [dataSource]="dataTable">
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 
@@ -31,7 +43,7 @@
 
       <ng-container matColumnDef="points">
         <th mat-header-cell *matHeaderCellDef>Puntaje</th>
-        <td mat-cell *matCellDef="let element">{{ element.lastName }}</td>
+        <td mat-cell *matCellDef="let element; let i = index">{{ totalScores[i] }}</td>
       </ng-container>
     </table>
   </div>

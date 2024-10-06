@@ -1,3 +1,7 @@
+export interface CreateGroupBody {
+  nameGroup: string;
+}
+
 export interface CreateGroupResponse {
   serialGroup: string;
   tokens: Tokens;

@@ -1,7 +1,7 @@
 export interface Group {
-    nameGroup: string;
-    createAt:  Date;
-    users:     User[];
+  nameGroup: string;
+  createAt:  Date;
+  users:     User[];
 }
 
 export interface User {

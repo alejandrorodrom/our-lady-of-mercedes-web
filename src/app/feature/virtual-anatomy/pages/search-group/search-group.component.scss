@@ -18,12 +18,26 @@
     padding: 60px;
     justify-content: center;
     align-items: center;
-
+    position: relative;
+    
     > p {
       color: white;
       font-size: 40px;
       font-weight: bold;
       margin-bottom: 40px;
+    }
+
+    &__back {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+
+      & > button {
+        background-color: #509493;
+        border-radius: 20px;
+        height: 60px;
+        width: 60px;
+      }
     }
 
     &__create {

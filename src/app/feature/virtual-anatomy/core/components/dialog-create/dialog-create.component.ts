@@ -1,8 +1,6 @@
-import { Component, Inject, signal } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { CreateGroupResponse } from '../../interfaces/post/create-signup/response';
+import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dialog-create',
@@ -15,6 +13,7 @@ export class DialogCreateComponent {
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit(): void {
-    console.log(this.data.groupData.serialGroup); // Aquí puedes acceder al dato enviado
+    console.log(this.data.groupName)
+    console.log(this.data.groupData.serialGroup);
   }
 }

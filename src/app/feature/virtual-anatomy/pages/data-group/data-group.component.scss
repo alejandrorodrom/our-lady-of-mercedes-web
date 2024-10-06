@@ -1,17 +1,53 @@
 :host {
   width: 100%;
   min-height: calc(100vh - 182px);
-  background-color: #0E0A40;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  background-image: url('/assets/images/fondoRV.webp');
+  background-size: cover;
+  background-position: center;
+
 
   .presentation {
     background-color: rgb(71, 24, 116);
     width: 900px;
     border-radius: 15px;
-    padding: 30px;
+    padding: 40px;
+
+    &__tittle{
+      display: flex;
+      position: relative;
+      margin-bottom: 30px;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+
+      &--back {
+        top: 0;
+        left: 0;
+        margin-bottom: 20px;
+        position: absolute;
+
+        & > button {
+          background-color: #509493;
+          border-radius: 20px;
+          height: 60px;
+          width: 60px;
+        }
+      }
+
+      &--name {
+        & > p {
+          font-size: 50px;
+          font-weight: bold;
+          color: white;
+          line-height: 1;
+          margin: 0;
+        }
+      }
+    }
 
     &__data {
       min-height: 636px;
