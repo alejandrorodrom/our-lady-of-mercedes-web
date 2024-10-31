@@ -41,9 +41,17 @@
         <td mat-cell *matCellDef="let element">{{ element.createAt | date:"medium" }}</td>
       </ng-container>
 
-      <ng-container matColumnDef="points">
-        <th mat-header-cell *matHeaderCellDef>Puntaje</th>
-        <td mat-cell *matCellDef="let element; let i = index">{{ totalScores[i] }}</td>
+      <ng-container matColumnDef="capacity1">
+        <th mat-header-cell *matHeaderCellDef>Capacidad 1</th>
+        <td mat-cell *matCellDef="let element; let i = index">{{ capacity1[i] }}</td>
+      </ng-container>
+      <ng-container matColumnDef="capacity2">
+        <th mat-header-cell *matHeaderCellDef>Capacidad 2</th>
+        <td mat-cell *matCellDef="let element; let i = index">{{ capacity2[i] }}</td>
+      </ng-container>
+      <ng-container matColumnDef="competence">
+        <th mat-header-cell *matHeaderCellDef>Competencia</th>
+        <td mat-cell *matCellDef="let element; let i = index">{{ competences[i] }}</td>
       </ng-container>
     </table>
   </div>

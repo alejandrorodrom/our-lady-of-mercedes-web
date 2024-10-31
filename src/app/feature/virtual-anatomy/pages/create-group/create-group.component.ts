@@ -6,12 +6,13 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { RouterLink } from '@angular/router';
 
 import { CreateGroupBody } from 'src/app/feature/virtual-anatomy/core/interfaces/create-group.interface';
 import { environment } from 'src/environment/environments';
 import { GroupFacade } from '../../aplication/group.facade';
 import { DialogCreateComponent } from '../../core/components/dialog-create/dialog-create.component';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-create-group',
@@ -27,43 +28,33 @@ import { RouterLink } from '@angular/router';
     MatIconModule,
     CommonModule,
     MatDialogModule,
-    RouterLink
+    RouterLink,
+    MatProgressSpinnerModule
   ]
 })
 export class CreateGroupComponent {
   apiUrl = signal<string>(environment.api)
   private readonly groupService: GroupFacade = inject(GroupFacade);
   private readonly dialog: MatDialog = inject(MatDialog);
-  name = '';
-
-  /*test: CreateGroupResponse = {
-    serialGroup: 'asdasdasd',
-    tokens: {
-      access: 'ASDASDSA',
-      refresh: 'ASDASDSDSD'
-    }
-  }
-
-  ngOnInit(){
-    this.dialog.open(DialogCreateComponent, {
-      data: {
-        groupName: "asd",
-        groupData: this.test
-      }});
-  }*/
+  onSpinner: boolean = false;
+  name: string = '';
 
   createGroup() {
     const body: CreateGroupBody = {
-      nameGroup: this.name
+      nameGroup: this.name.toUpperCase()
     }
 
+    this.onSpinner = true;
+    
     this.groupService.createGroup(body).subscribe(resp => {
+      this.onSpinner = false;
+      this.name = '';
       this.dialog.open(DialogCreateComponent, {
         data: {
           groupName: body.nameGroup,
           groupData: resp
         }
-      });
-    })
+      })
+    });
   }
 }

@@ -1,13 +1,13 @@
 import { inject, Injectable } from "@angular/core";
 import { GroupRepository } from "../domain/group.repository";
 import { Observable } from "rxjs";
-import { Group } from "../core/interfaces/group.interface";
+import { Group } from "../core/interfaces/search-group.interface";
 import { HttpClient } from "@angular/common/http";
 import { environment } from "src/environment/environments";
 import { CreateGroupBody } from "../core/interfaces/create-group.interface";
 import { CreateGroupResponse, Tokens } from "../core/interfaces/create-group.interface";
 import { SearchGroupBody } from "../core/interfaces/search-group.interface";
-import { TokensService } from "../core/services/tokens.service";
+import { TokensService } from "../core/stores/tokens.service";
 
 @Injectable()
 export class GroupHttp extends GroupRepository {
@@ -24,11 +24,11 @@ url = `${environment.api}`;
   }
 
   getGroup(): Observable<Group[]> {
-    //const token = this.tokenService.currentToken;
-    //console.log('Token:', token);
+    console.log(this.tokenService.accessToken)
     return this.http.get<Group[]>(`${this.url}/answer`, {
       headers: {
-        'Authorization': `Bearer ${this.tokenService.accessToken}`
+        //'Authorization': `Bearer ${this.tokenService.accessToken}`
+        'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJncm91cElkIjoyMCwiaWF0IjoxNzMwMzczOTQxLCJleHAiOjE3MzAzNzQ0ODF9.VfMpGbUumVB74BW4rWW7rw7suAYmUY9tPeevjMtg4DU`
       }
     });
   }

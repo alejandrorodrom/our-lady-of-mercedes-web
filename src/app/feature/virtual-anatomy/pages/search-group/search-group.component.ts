@@ -9,9 +9,7 @@ import { Router, RouterLink } from '@angular/router';
 import { environment } from 'src/environment/environments';
 import { GroupFacade } from '../../aplication/group.facade';
 import { SearchGroupBody } from '../../core/interfaces/search-group.interface';
-import { delay, switchMap, tap } from 'rxjs';
-import { TokensService } from '../../core/services/tokens.service';
-import { Tokens } from '../../core/interfaces/create-group.interface';
+import { TokensService } from '../../core/stores/tokens.service';
 
 @Component({
   selector: 'app-search-group',

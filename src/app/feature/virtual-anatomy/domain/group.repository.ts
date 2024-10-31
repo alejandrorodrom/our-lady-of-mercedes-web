@@ -1,5 +1,5 @@
 import { Observable } from "rxjs";
-import { Group } from "../core/interfaces/group.interface";
+import { Group } from "../core/interfaces/search-group.interface";
 import { CreateGroupBody } from "../core/interfaces/create-group.interface";
 import { CreateGroupResponse, Tokens } from "../core/interfaces/create-group.interface";
 import { SearchGroupBody } from "../core/interfaces/search-group.interface";
