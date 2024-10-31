@@ -27,8 +27,7 @@ url = `${environment.api}`;
     console.log(this.tokenService.accessToken)
     return this.http.get<Group[]>(`${this.url}/answer`, {
       headers: {
-        //'Authorization': `Bearer ${this.tokenService.accessToken}`
-        'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJncm91cElkIjoyMCwiaWF0IjoxNzMwMzczOTQxLCJleHAiOjE3MzAzNzQ0ODF9.VfMpGbUumVB74BW4rWW7rw7suAYmUY9tPeevjMtg4DU`
+        'Authorization': `Bearer ${this.tokenService.accessToken}`
       }
     });
   }
