@@ -1,9 +1,5 @@
 import { CommonModule } from '@angular/common';
-import {
-  Component,
-  inject,
-  ViewChild
-} from '@angular/core';
+import { Component, inject, OnInit, ViewChild } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
@@ -30,13 +26,11 @@ echarts.use([BarChart, GridComponent, CanvasRenderer, LineChart]);
     MatPaginatorModule,
     MatButtonModule,
     CommonModule,
-    NgxEchartsDirective
+    NgxEchartsDirective,
   ],
-  providers: [
-    provideEchartsCore({ echarts }),
-  ]
+  providers: [provideEchartsCore({ echarts })],
 })
-export class DataGroupComponent {
+export class DataGroupComponent implements OnInit {
   private readonly groupService: GroupFacade = inject(GroupFacade);
   weightByCompetence: { [id: number]: number } = {
     1: 0.0238,
@@ -84,21 +78,9 @@ export class DataGroupComponent {
     19: 0.15,
     20: 0.15,
   };
-  chartOption: EChartsOption = {
-    xAxis: {
-      type: 'category',
-      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-    },
-    yAxis: {
-      type: 'value',
-    },
-    series: [
-      {
-        data: [820, 932, 901, 934, 1290, 1330, 1320],
-        type: 'bar',
-      },
-    ],
-  };
+  listGrafic: string[] = [];
+
+  chartOption!: EChartsOption;
 
   displayedColumns: string[] = [
     'name',
@@ -111,7 +93,7 @@ export class DataGroupComponent {
     'competence',
   ];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  dataGroup!: User[];
+  dataGroup: User[] = [];
   dataTable!: MatTableDataSource<User>;
   totalScoreCompetence: number[] = [];
   totalScoreCapacity1: number[] = [];
@@ -126,20 +108,24 @@ export class DataGroupComponent {
   ngOnInit() {
     this.groupService.getGroup().subscribe({
       next: (resp: Group[]) => {
-        console.log(resp);
+        //console.log(resp);
         this.groupName = resp[0].nameGroup;
         this.dataGroup = resp[0].users;
+        let nameList: string[] = [];
+        let points: number[] = [];
         this.dataTable = new MatTableDataSource<User>(this.dataGroup);
         this.dataTable.paginator = this.paginator;
+
         for (let i = 0; i < this.dataGroup.length; i++) {
           let totalScoreCompetence = 0;
           let totalScoreCapacity1 = 0;
           let totalScoreCapacity2 = 0;
           let totalScore = 0;
+          nameList.push(this.dataGroup[i].name);
 
           for (let j = 0; j < this.dataGroup[i].answer.length; j++) {
             const qId = this.dataGroup[i].answer[j].question.id;
-            totalScore = this.dataGroup[i].answer[j].answerTF;
+            totalScore += this.dataGroup[i].answer[j].answerTF;
             const weightCompetence: number = this.getWeightByCompetence(qId);
             totalScoreCompetence +=
               this.dataGroup[i].answer[j].answerTF * weightCompetence;
@@ -163,14 +149,32 @@ export class DataGroupComponent {
           this.totalScoreCapacity2.push(
             Math.round(totalScoreCapacity2 * 100) / 100
           );
-
+          points.push(totalScore);
           this.competences.push(this.getLetter(this.totalScoreCompetence[i]));
           this.capacity1.push(this.getLetter(this.totalScoreCapacity1[i]));
           this.capacity2.push(this.getLetter(this.totalScoreCapacity2[i]));
-          console.log('competencia: ' + this.totalScoreCompetence[i]);
-          console.log('capacidad 1: ' + this.totalScoreCapacity1[i]);
-          console.log('capacidad 2: ' + this.totalScoreCapacity2[i]);
+          //console.log('competencia: ' + this.totalScoreCompetence[i]);
+          //console.log('capacidad 1: ' + this.totalScoreCapacity1[i]);
+          //console.log('capacidad 2: ' + this.totalScoreCapacity2[i]);
+
         }
+
+        this.chartOption = {
+          xAxis: {
+            type: 'category',
+            data: nameList
+          },
+          yAxis: {
+            type: 'value',
+          },
+          series: [
+            {
+              data: points,
+              type: 'line',
+            },
+          ],
+        };
+
       },
       error: (err) => {
         console.log('este es el error: ', err);

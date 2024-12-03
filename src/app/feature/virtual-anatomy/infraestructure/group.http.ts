@@ -24,7 +24,7 @@ url = `${environment.api}`;
   }
 
   getGroup(): Observable<Group[]> {
-    console.log(this.tokenService.accessToken)
+    //console.log(this.tokenService.accessToken)
     return this.http.get<Group[]>(`${this.url}/answer`, {
       headers: {
         'Authorization': `Bearer ${this.tokenService.accessToken}`
