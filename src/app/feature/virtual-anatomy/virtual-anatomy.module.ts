@@ -9,8 +9,6 @@ import { PresentationComponent } from './pages/presentation/presentation.compone
 import { SearchGroupComponent } from './pages/search-group/search-group.component';
 import { VirtualAnatomyRoutingModule } from './virtual-anatomy-routing.module';
 
-
-
 @NgModule({
   declarations: [
   ],

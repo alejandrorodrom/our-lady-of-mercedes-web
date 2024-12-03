@@ -8,8 +8,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { RouterModule } from '@angular/router';
-import { GroupFacade } from '../../aplication/group.facade';
 import { Group, User } from '../../core/interfaces/search-group.interface';
+import { GroupFacade } from '../../aplication/group.facade';
+import { NgxEchartsDirective, provideEchartsCore } from 'ngx-echarts';
+import * as echarts from 'echarts/core';
+import { EChartsOption } from 'echarts';
+import { BarChart } from 'echarts/charts';
+import { GridComponent } from 'echarts/components';
+import { CanvasRenderer } from 'echarts/renderers';
+import { LineChart } from 'echarts/charts';
+echarts.use([BarChart, GridComponent, CanvasRenderer, LineChart]);
 
 @Component({
   selector: 'app-data-group',
@@ -22,7 +30,11 @@ import { Group, User } from '../../core/interfaces/search-group.interface';
     MatPaginatorModule,
     MatButtonModule,
     CommonModule,
+    NgxEchartsDirective
   ],
+  providers: [
+    provideEchartsCore({ echarts }),
+  ]
 })
 export class DataGroupComponent {
   private readonly groupService: GroupFacade = inject(GroupFacade);
@@ -72,6 +84,21 @@ export class DataGroupComponent {
     19: 0.15,
     20: 0.15,
   };
+  chartOption: EChartsOption = {
+    xAxis: {
+      type: 'category',
+      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    },
+    yAxis: {
+      type: 'value',
+    },
+    series: [
+      {
+        data: [820, 932, 901, 934, 1290, 1330, 1320],
+        type: 'bar',
+      },
+    ],
+  };
 
   displayedColumns: string[] = [
     'name',
@@ -94,7 +121,7 @@ export class DataGroupComponent {
   capacity2: string[] = [];
   groupName!: string;
   totalScores: number[] = [];
-  grafics: boolean = false;
+  grafics: boolean = true;
 
   ngOnInit() {
     this.groupService.getGroup().subscribe({
