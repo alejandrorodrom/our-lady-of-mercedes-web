@@ -1,4 +1,4 @@
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -21,12 +21,11 @@ import { TokensService } from '../../core/stores/tokens.service';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    NgOptimizedImage,
     MatButtonModule,
     MatIconModule,
     CommonModule,
     RouterLink
-  ],
+  ]
 })
 export class SearchGroupComponent {
   apiUrl = signal<string>(environment.api);
@@ -48,21 +47,5 @@ export class SearchGroupComponent {
         this.tokenService.refreshToken = token.refresh;
         this.router.navigate(['/anatomia-virtual/datos-grupos']);
       })
-      /*.pipe(
-        tap((token) => {
-          this.tokenService.accessToken = token.access;
-          this.tokenService.refreshToken = token.refresh;
-        }),
-        switchMap(() => this.groupService.getGroup())
-      )
-      .subscribe({
-        next: (resp) => {
-          console.log(resp);
-          //this.router.navigate(['/anatomia-virtual/datos-grupos']);
-        },
-        error: (err) => {
-          console.log(err);
-        },
-      });*/
   }
 }

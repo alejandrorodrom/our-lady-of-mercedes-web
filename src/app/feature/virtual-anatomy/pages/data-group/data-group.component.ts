@@ -1,17 +1,15 @@
+import { CommonModule } from '@angular/common';
 import {
-  AfterViewInit,
   Component,
   inject,
-  signal,
-  ViewChild,
+  ViewChild
 } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { RouterModule } from '@angular/router';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-import { Group, User } from '../../core/interfaces/search-group.interface';
-import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { GroupFacade } from '../../aplication/group.facade';
+import { Group, User } from '../../core/interfaces/search-group.interface';
 
 @Component({
   selector: 'app-data-group',
@@ -95,6 +93,8 @@ export class DataGroupComponent {
   capacity1: string[] = [];
   capacity2: string[] = [];
   groupName!: string;
+  totalScores: number[] = [];
+  grafics: boolean = false;
 
   ngOnInit() {
     this.groupService.getGroup().subscribe({
@@ -108,9 +108,11 @@ export class DataGroupComponent {
           let totalScoreCompetence = 0;
           let totalScoreCapacity1 = 0;
           let totalScoreCapacity2 = 0;
+          let totalScore = 0;
 
           for (let j = 0; j < this.dataGroup[i].answer.length; j++) {
             const qId = this.dataGroup[i].answer[j].question.id;
+            totalScore = this.dataGroup[i].answer[j].answerTF;
             const weightCompetence: number = this.getWeightByCompetence(qId);
             totalScoreCompetence +=
               this.dataGroup[i].answer[j].answerTF * weightCompetence;
@@ -125,16 +127,22 @@ export class DataGroupComponent {
                 this.dataGroup[i].answer[j].answerTF * weightCapacity2;
             }
           }
-          this.totalScoreCompetence.push(Math.round(totalScoreCompetence*100)/100);
-          this.totalScoreCapacity1.push(Math.round(totalScoreCapacity1*100)/100);
-          this.totalScoreCapacity2.push(Math.round(totalScoreCapacity2*100)/100);
+          this.totalScoreCompetence.push(
+            Math.round(totalScoreCompetence * 100) / 100
+          );
+          this.totalScoreCapacity1.push(
+            Math.round(totalScoreCapacity1 * 100) / 100
+          );
+          this.totalScoreCapacity2.push(
+            Math.round(totalScoreCapacity2 * 100) / 100
+          );
 
           this.competences.push(this.getLetter(this.totalScoreCompetence[i]));
           this.capacity1.push(this.getLetter(this.totalScoreCapacity1[i]));
           this.capacity2.push(this.getLetter(this.totalScoreCapacity2[i]));
-          console.log("competencia: "+this.totalScoreCompetence[i]);
-          console.log("capacidad 1: "+this.totalScoreCapacity1[i]);
-          console.log("capacidad 2: "+this.totalScoreCapacity2[i]);
+          console.log('competencia: ' + this.totalScoreCompetence[i]);
+          console.log('capacidad 1: ' + this.totalScoreCapacity1[i]);
+          console.log('capacidad 2: ' + this.totalScoreCapacity2[i]);
         }
       },
       error: (err) => {
@@ -148,7 +156,9 @@ export class DataGroupComponent {
   }
 
   getWeightByCapacity(id: number): number {
-    return this.weightByCapacity1[id]?this.weightByCapacity1[id]:this.weightByCapacity2[id];
+    return this.weightByCapacity1[id]
+      ? this.weightByCapacity1[id]
+      : this.weightByCapacity2[id];
   }
 
   getLetter(score: number): string {
